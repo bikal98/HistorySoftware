@@ -1,0 +1,10 @@
+C:\Users\Bikal\source\repos\HistorySoftware\HistorySoftware\bin\Debug\HistorySoftware.exe.config
+C:\Users\Bikal\source\repos\HistorySoftware\HistorySoftware\bin\Debug\HistorySoftware.exe
+C:\Users\Bikal\source\repos\HistorySoftware\HistorySoftware\bin\Debug\HistorySoftware.pdb
+C:\Users\Bikal\source\repos\HistorySoftware\HistorySoftware\obj\Debug\HistorySoftware.csprojAssemblyReference.cache
+C:\Users\Bikal\source\repos\HistorySoftware\HistorySoftware\obj\Debug\HistorySoftware.Form1.resources
+C:\Users\Bikal\source\repos\HistorySoftware\HistorySoftware\obj\Debug\HistorySoftware.Properties.Resources.resources
+C:\Users\Bikal\source\repos\HistorySoftware\HistorySoftware\obj\Debug\HistorySoftware.csproj.GenerateResource.cache
+C:\Users\Bikal\source\repos\HistorySoftware\HistorySoftware\obj\Debug\HistorySoftware.csproj.CoreCompileInputs.cache
+C:\Users\Bikal\source\repos\HistorySoftware\HistorySoftware\obj\Debug\HistorySoftware.exe
+C:\Users\Bikal\source\repos\HistorySoftware\HistorySoftware\obj\Debug\HistorySoftware.pdb
