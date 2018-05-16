@@ -16,5 +16,14 @@ namespace HistorySoftware
         {
             InitializeComponent();
         }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            var form = new QuanLiSuKien.Search();
+            form.ShowDialog();
+            
+
+        }
+        
     }
 }

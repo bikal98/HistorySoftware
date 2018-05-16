@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HistorySoftwareModelStoreContainer" CdmEntityContainer="HistorySoftwareEntities">
+    <EntitySetMapping Name="SuKiens">
+      <EntityTypeMapping TypeName="HistorySoftwareModel.SuKien">
+        <MappingFragment StoreEntitySet="SuKien">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TenSuKien" ColumnName="TenSuKien" />
+          <ScalarProperty Name="NgaySuKien" ColumnName="NgaySuKien" />
+          <ScalarProperty Name="ThangSuKien" ColumnName="ThangSuKien" />
+          <ScalarProperty Name="NamSuKien" ColumnName="NamSuKien" />
+          <ScalarProperty Name="NoiDungSuKien" ColumnName="NoiDungSuKien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

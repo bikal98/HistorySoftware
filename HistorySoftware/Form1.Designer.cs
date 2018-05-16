@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.sEACHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.vIEWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_Search = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_ViewDate = new System.Windows.Forms.ToolStripMenuItem();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -38,25 +38,26 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sEACHToolStripMenuItem,
-            this.vIEWToolStripMenuItem});
+            this.btn_Search,
+            this.btn_ViewDate});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // sEACHToolStripMenuItem
+            // btn_Search
             // 
-            this.sEACHToolStripMenuItem.Name = "sEACHToolStripMenuItem";
-            this.sEACHToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
-            this.sEACHToolStripMenuItem.Text = "SEARCH";
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(63, 20);
+            this.btn_Search.Text = "SEARCH";
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
-            // vIEWToolStripMenuItem
+            // btn_ViewDate
             // 
-            this.vIEWToolStripMenuItem.Name = "vIEWToolStripMenuItem";
-            this.vIEWToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
-            this.vIEWToolStripMenuItem.Text = "VIEW DATE";
+            this.btn_ViewDate.Name = "btn_ViewDate";
+            this.btn_ViewDate.Size = new System.Drawing.Size(77, 20);
+            this.btn_ViewDate.Text = "VIEW DATE";
             // 
             // dateTimePicker1
             // 
@@ -86,8 +87,8 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem sEACHToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem vIEWToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btn_Search;
+        private System.Windows.Forms.ToolStripMenuItem btn_ViewDate;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
