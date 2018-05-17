@@ -41,6 +41,7 @@
             this.ThangSuKien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NamSuKien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NoiDungSuKien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Image = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.lstEvent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.historySoftwareDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.historySoftwareDataSetBindingSource)).BeginInit();
@@ -74,12 +75,14 @@
             this.NgaySuKien,
             this.ThangSuKien,
             this.NamSuKien,
-            this.NoiDungSuKien});
+            this.NoiDungSuKien,
+            this.Image});
             this.lstEvent.Location = new System.Drawing.Point(12, 134);
             this.lstEvent.Name = "lstEvent";
             this.lstEvent.ReadOnly = true;
             this.lstEvent.Size = new System.Drawing.Size(776, 304);
             this.lstEvent.TabIndex = 2;
+            this.lstEvent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.lstEvent_CellContentClick);
             // 
             // btnSearch_Click
             // 
@@ -144,6 +147,13 @@
             this.NoiDungSuKien.Name = "NoiDungSuKien";
             this.NoiDungSuKien.ReadOnly = true;
             // 
+            // Image
+            // 
+            this.Image.DataPropertyName = "HinhAnh";
+            this.Image.HeaderText = "Hình Ảnh";
+            this.Image.Name = "Image";
+            this.Image.ReadOnly = true;
+            // 
             // Search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -178,5 +188,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ThangSuKien;
         private System.Windows.Forms.DataGridViewTextBoxColumn NamSuKien;
         private System.Windows.Forms.DataGridViewTextBoxColumn NoiDungSuKien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Image;
     }
 }

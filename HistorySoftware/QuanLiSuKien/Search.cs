@@ -67,5 +67,13 @@ namespace HistorySoftware.QuanLiSuKien
 
             }
         }
+
+        private void lstEvent_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Detail dts = new Detail();
+            dts.title = (lstEvent.CurrentRow.Cells["TenSuKien"].Value.ToString());
+            dts.content = (lstEvent.CurrentRow.Cells["NoiDungSuKien"].Value.ToString());
+            dts.Show();
+        }
     }
 }

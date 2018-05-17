@@ -24,3 +24,5 @@ D:\HistorySoftware\HistorySoftware\obj\Debug\HistorySoftware.csproj.CoreCompileI
 D:\HistorySoftware\HistorySoftware\obj\Debug\HistorySoftware.csproj.CopyComplete
 D:\HistorySoftware\HistorySoftware\obj\Debug\HistorySoftware.exe
 D:\HistorySoftware\HistorySoftware\obj\Debug\HistorySoftware.pdb
+D:\HistorySoftware\HistorySoftware\obj\Debug\HistorySoftware.QuanLiSuKien.Detail.resources
+D:\HistorySoftware\HistorySoftware\obj\Debug\HistorySoftware.QuanLiSuKien.View.resources
