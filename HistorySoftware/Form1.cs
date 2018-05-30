@@ -22,6 +22,7 @@ namespace HistorySoftware
             var form = new QuanLiSuKien.Search();
             form.ShowDialog();
             
+            
 
         }
 
@@ -54,6 +55,13 @@ namespace HistorySoftware
         {
             var form = new QuanLiSuKien.View();
             form.ShowDialog();
+        }
+
+        private void btnLogIn_Click(object sender, EventArgs e)
+        {
+            var form = new QuanLiSuKien.frmLogIn();
+            form.ShowDialog();
+            this.Hide();
         }
     }
 }

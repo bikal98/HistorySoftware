@@ -26,3 +26,5 @@ D:\HistorySoftware\HistorySoftware\obj\Debug\HistorySoftware.exe
 D:\HistorySoftware\HistorySoftware\obj\Debug\HistorySoftware.pdb
 D:\HistorySoftware\HistorySoftware\obj\Debug\HistorySoftware.QuanLiSuKien.Detail.resources
 D:\HistorySoftware\HistorySoftware\obj\Debug\HistorySoftware.QuanLiSuKien.View.resources
+D:\HistorySoftware\HistorySoftware\obj\Debug\HistorySoftware.QuanLiSuKien.frmLogIn.resources
+D:\HistorySoftware\HistorySoftware\obj\Debug\HistorySoftware.QuanLiSuKien.Admin.resources
