@@ -5,15 +5,21 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="HistorySoftwareModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'HistorySoftware.dbo.Login' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Login">
+          <Property Name="TaiKhoan" Type="nchar" MaxLength="100" />
+          <Property Name="MatKhau" Type="nchar" MaxLength="100" />
+        </EntityType>-->
         <EntityType Name="SuKien">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
-          <Property Name="TenSuKien" Type="nvarchar" MaxLength="100" />
-          <Property Name="NgaySuKien" Type="int" />
-          <Property Name="ThangSuKien" Type="int" />
-          <Property Name="NamSuKien" Type="int" />
+          <Property Name="Id" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="TenSuKien" Type="nvarchar" MaxLength="50" />
+          <Property Name="NgaySuKien" Type="nchar" MaxLength="10" />
+          <Property Name="ThangSuKien" Type="nchar" MaxLength="10" />
+          <Property Name="NamSuKien" Type="nchar" MaxLength="10" />
           <Property Name="NoiDungSuKien" Type="nvarchar(max)" />
         </EntityType>
         <EntityContainer Name="HistorySoftwareModelStoreContainer">
@@ -28,14 +34,14 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="TenSuKien" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="NgaySuKien" Type="Int32" />
-          <Property Name="ThangSuKien" Type="Int32" />
-          <Property Name="NamSuKien" Type="Int32" />
+          <Property Name="Id" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="TenSuKien" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NgaySuKien" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="ThangSuKien" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="NamSuKien" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="NoiDungSuKien" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="HistorySoftwareEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="HistorySoftwareEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="SuKiens" EntityType="Self.SuKien" />
         </EntityContainer>
       </Schema>
@@ -43,7 +49,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="HistorySoftwareModelStoreContainer" CdmEntityContainer="HistorySoftwareEntities">
+        <EntityContainerMapping StorageEntityContainer="HistorySoftwareModelStoreContainer" CdmEntityContainer="HistorySoftwareEntities2">
           <EntitySetMapping Name="SuKiens">
             <EntityTypeMapping TypeName="HistorySoftwareModel.SuKien">
               <MappingFragment StoreEntitySet="SuKien">

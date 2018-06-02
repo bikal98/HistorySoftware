@@ -28,3 +28,5 @@ D:\HistorySoftware\HistorySoftware\obj\Debug\HistorySoftware.QuanLiSuKien.Detail
 D:\HistorySoftware\HistorySoftware\obj\Debug\HistorySoftware.QuanLiSuKien.View.resources
 D:\HistorySoftware\HistorySoftware\obj\Debug\HistorySoftware.QuanLiSuKien.frmLogIn.resources
 D:\HistorySoftware\HistorySoftware\obj\Debug\HistorySoftware.QuanLiSuKien.Admin.resources
+D:\HistorySoftware\HistorySoftware\obj\Debug\HistorySoftware.QuanLiSuKien.Add.resources
+D:\HistorySoftware\HistorySoftware\obj\Debug\HistorySoftware.QuanLiSuKien.Edit.resources

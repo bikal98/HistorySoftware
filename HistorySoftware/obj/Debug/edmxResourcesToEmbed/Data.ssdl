@@ -1,14 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="HistorySoftwareModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'HistorySoftware.dbo.Login' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Login">
+          <Property Name="TaiKhoan" Type="nchar" MaxLength="100" />
+          <Property Name="MatKhau" Type="nchar" MaxLength="100" />
+        </EntityType>-->
   <EntityType Name="SuKien">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" Nullable="false" />
-    <Property Name="TenSuKien" Type="nvarchar" MaxLength="100" />
-    <Property Name="NgaySuKien" Type="int" />
-    <Property Name="ThangSuKien" Type="int" />
-    <Property Name="NamSuKien" Type="int" />
+    <Property Name="Id" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="TenSuKien" Type="nvarchar" MaxLength="50" />
+    <Property Name="NgaySuKien" Type="nchar" MaxLength="10" />
+    <Property Name="ThangSuKien" Type="nchar" MaxLength="10" />
+    <Property Name="NamSuKien" Type="nchar" MaxLength="10" />
     <Property Name="NoiDungSuKien" Type="nvarchar(max)" />
   </EntityType>
   <EntityContainer Name="HistorySoftwareModelStoreContainer">

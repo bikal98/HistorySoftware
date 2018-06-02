@@ -13,10 +13,10 @@ namespace HistorySoftware
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class HistorySoftwareEntities : DbContext
+    public partial class HistorySoftwareEntities2 : DbContext
     {
-        public HistorySoftwareEntities()
-            : base("name=HistorySoftwareEntities")
+        public HistorySoftwareEntities2()
+            : base("name=HistorySoftwareEntities2")
         {
         }
     

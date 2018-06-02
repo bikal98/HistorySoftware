@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.chinhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thêmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xoáToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnFix = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAdd = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnRefresh = new System.Windows.Forms.ToolStripMenuItem();
+            this.dtlShow = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenSuKien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgaySuKien = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,46 +43,57 @@
             this.Image = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtlShow)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.chinhToolStripMenuItem,
-            this.thêmToolStripMenuItem,
-            this.xoáToolStripMenuItem});
+            this.btnFix,
+            this.btnAdd,
+            this.btnDelete,
+            this.btnRefresh});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(79, 450);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // chinhToolStripMenuItem
+            // btnFix
             // 
-            this.chinhToolStripMenuItem.Name = "chinhToolStripMenuItem";
-            this.chinhToolStripMenuItem.Size = new System.Drawing.Size(66, 19);
-            this.chinhToolStripMenuItem.Text = "Chỉnh Sửa";
+            this.btnFix.Name = "btnFix";
+            this.btnFix.Size = new System.Drawing.Size(113, 19);
+            this.btnFix.Text = "Chỉnh Sửa";
+            this.btnFix.Click += new System.EventHandler(this.btnFix_Click);
             // 
-            // thêmToolStripMenuItem
+            // btnAdd
             // 
-            this.thêmToolStripMenuItem.Name = "thêmToolStripMenuItem";
-            this.thêmToolStripMenuItem.Size = new System.Drawing.Size(66, 19);
-            this.thêmToolStripMenuItem.Text = "Thêm";
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(113, 19);
+            this.btnAdd.Text = "Thêm";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // xoáToolStripMenuItem
+            // btnDelete
             // 
-            this.xoáToolStripMenuItem.Name = "xoáToolStripMenuItem";
-            this.xoáToolStripMenuItem.Size = new System.Drawing.Size(66, 19);
-            this.xoáToolStripMenuItem.Text = "Xoá";
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(113, 19);
+            this.btnDelete.Text = "Xoá";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // dataGridView1
+            // btnRefresh
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(113, 19);
+            this.btnRefresh.Text = "Làm Mới";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // dtlShow
+            // 
+            this.dtlShow.AllowUserToAddRows = false;
+            this.dtlShow.AllowUserToDeleteRows = false;
+            this.dtlShow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtlShow.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.TenSuKien,
             this.NgaySuKien,
@@ -89,12 +101,13 @@
             this.NamSuKien,
             this.NoiDungSuKien,
             this.Image});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(79, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(721, 450);
-            this.dataGridView1.TabIndex = 1;
+            this.dtlShow.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtlShow.Location = new System.Drawing.Point(79, 0);
+            this.dtlShow.Name = "dtlShow";
+            this.dtlShow.ReadOnly = true;
+            this.dtlShow.Size = new System.Drawing.Size(721, 450);
+            this.dtlShow.TabIndex = 1;
+            this.dtlShow.DoubleClick += new System.EventHandler(this.dtlShow_doubleClick);
             // 
             // Id
             // 
@@ -149,9 +162,9 @@
             // 
             this.btnLogOut.Location = new System.Drawing.Point(0, 398);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(75, 23);
+            this.btnLogOut.Size = new System.Drawing.Size(79, 23);
             this.btnLogOut.TabIndex = 2;
-            this.btnLogOut.Text = "Thoát";
+            this.btnLogOut.Text = "Đăng Xuất";
             this.btnLogOut.UseVisualStyleBackColor = true;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
@@ -161,13 +174,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnLogOut);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtlShow);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Admin";
             this.Text = "Admin";
+            this.Load += new System.EventHandler(this.Admin_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtlShow)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,10 +190,10 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem chinhToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thêmToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem xoáToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ToolStripMenuItem btnFix;
+        private System.Windows.Forms.ToolStripMenuItem btnAdd;
+        private System.Windows.Forms.ToolStripMenuItem btnDelete;
+        private System.Windows.Forms.DataGridView dtlShow;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSuKien;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgaySuKien;
@@ -188,5 +202,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NoiDungSuKien;
         private System.Windows.Forms.DataGridViewTextBoxColumn Image;
         private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.ToolStripMenuItem btnRefresh;
     }
 }

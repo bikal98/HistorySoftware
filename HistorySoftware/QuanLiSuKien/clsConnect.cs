@@ -55,5 +55,6 @@ namespace HistorySoftware.QuanLiSuKien
             CloseConnect();
             return dt;
         }
+        
     }
 }

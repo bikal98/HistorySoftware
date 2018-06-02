@@ -14,11 +14,11 @@ namespace HistorySoftware
     
     public partial class SuKien
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string TenSuKien { get; set; }
-        public Nullable<int> NgaySuKien { get; set; }
-        public Nullable<int> ThangSuKien { get; set; }
-        public Nullable<int> NamSuKien { get; set; }
+        public string NgaySuKien { get; set; }
+        public string ThangSuKien { get; set; }
+        public string NamSuKien { get; set; }
         public string NoiDungSuKien { get; set; }
     }
 }

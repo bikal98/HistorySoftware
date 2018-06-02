@@ -4,14 +4,14 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" />
-    <Property Name="TenSuKien" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="NgaySuKien" Type="Int32" />
-    <Property Name="ThangSuKien" Type="Int32" />
-    <Property Name="NamSuKien" Type="Int32" />
+    <Property Name="Id" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="TenSuKien" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NgaySuKien" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ThangSuKien" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="NamSuKien" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
     <Property Name="NoiDungSuKien" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
-  <EntityContainer Name="HistorySoftwareEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="HistorySoftwareEntities2" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="SuKiens" EntityType="Self.SuKien" />
   </EntityContainer>
 </Schema>
