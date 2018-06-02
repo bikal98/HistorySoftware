@@ -55,6 +55,24 @@ namespace HistorySoftware.QuanLiSuKien
             CloseConnect();
             return dt;
         }
-        
+
+        public DataTable TimKiemView(string ChuoiTimKiem)
+        {
+            OpenConnect();
+            dt = new DataTable();
+            SqlCommand cmd = new SqlCommand("Event_TimKiemView", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            
+            cmd.Parameters.Add(new SqlParameter("Ngay", SqlDbType.NChar)).Value = ChuoiTimKiem;
+            cmd.Parameters.Add(new SqlParameter("Thang", SqlDbType.NChar)).Value = ChuoiTimKiem;
+            cmd.Parameters.Add(new SqlParameter("Nam", SqlDbType.NChar)).Value = ChuoiTimKiem;
+
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            CloseConnect();
+            return dt;
+        }
+
     }
 }

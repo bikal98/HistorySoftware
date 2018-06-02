@@ -60,8 +60,9 @@ namespace HistorySoftware
         private void btnLogIn_Click(object sender, EventArgs e)
         {
             var form = new QuanLiSuKien.frmLogIn();
-            form.ShowDialog();
             this.Hide();
+            form.ShowDialog();
+            
         }
     }
 }

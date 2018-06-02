@@ -31,11 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.btnFind = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtvList = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenSuKien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgaySuKien = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,7 +40,11 @@
             this.NamSuKien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NoiDungSuKien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HinhAnh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txtDay = new System.Windows.Forms.TextBox();
+            this.txtMonth = new System.Windows.Forms.TextBox();
+            this.txtYear = new System.Windows.Forms.TextBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dtvList)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -73,123 +74,22 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Chọn Năm";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "01",
-            "02",
-            "03",
-            "04",
-            "05",
-            "06",
-            "07",
-            "08",
-            "09",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31"});
-            this.comboBox1.Location = new System.Drawing.Point(144, 76);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 3;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12"});
-            this.comboBox2.Location = new System.Drawing.Point(391, 75);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 4;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "1945",
-            "1946",
-            "1947",
-            "1948",
-            "1949",
-            "1950",
-            "1951",
-            "1952",
-            "1953",
-            "1954",
-            "1955",
-            "1956",
-            "1957",
-            "1958",
-            "1959",
-            "1960",
-            "1961",
-            "1962",
-            "1963",
-            "1964",
-            "1965",
-            "1966",
-            "1967",
-            "1968",
-            "1969",
-            "1970",
-            "1971",
-            "1972",
-            "1973",
-            "1974",
-            "1975"});
-            this.comboBox3.Location = new System.Drawing.Point(656, 76);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 5;
-            // 
             // btnFind
             // 
-            this.btnFind.Location = new System.Drawing.Point(359, 122);
+            this.btnFind.Location = new System.Drawing.Point(239, 122);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(75, 23);
             this.btnFind.TabIndex = 6;
             this.btnFind.Text = "Tìm kiếm";
             this.btnFind.UseVisualStyleBackColor = true;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
-            // dataGridView1
+            // dtvList
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtvList.AllowUserToAddRows = false;
+            this.dtvList.AllowUserToDeleteRows = false;
+            this.dtvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtvList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.TenSuKien,
             this.NgaySuKien,
@@ -197,11 +97,12 @@
             this.NamSuKien,
             this.NoiDungSuKien,
             this.HinhAnh});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 151);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 287);
-            this.dataGridView1.TabIndex = 7;
+            this.dtvList.Location = new System.Drawing.Point(12, 151);
+            this.dtvList.Name = "dtvList";
+            this.dtvList.ReadOnly = true;
+            this.dtvList.Size = new System.Drawing.Size(776, 287);
+            this.dtvList.TabIndex = 7;
+            this.dtvList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvList_CellContentClick);
             // 
             // Id
             // 
@@ -253,22 +154,55 @@
             this.HinhAnh.Name = "HinhAnh";
             this.HinhAnh.ReadOnly = true;
             // 
+            // txtDay
+            // 
+            this.txtDay.Location = new System.Drawing.Point(153, 76);
+            this.txtDay.Name = "txtDay";
+            this.txtDay.Size = new System.Drawing.Size(100, 20);
+            this.txtDay.TabIndex = 8;
+            // 
+            // txtMonth
+            // 
+            this.txtMonth.Location = new System.Drawing.Point(379, 76);
+            this.txtMonth.Name = "txtMonth";
+            this.txtMonth.Size = new System.Drawing.Size(100, 20);
+            this.txtMonth.TabIndex = 9;
+            // 
+            // txtYear
+            // 
+            this.txtYear.Location = new System.Drawing.Point(642, 75);
+            this.txtYear.Name = "txtYear";
+            this.txtYear.Size = new System.Drawing.Size(100, 20);
+            this.txtYear.TabIndex = 10;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(486, 122);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefresh.TabIndex = 11;
+            this.btnRefresh.Text = "Làm mới";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.txtYear);
+            this.Controls.Add(this.txtMonth);
+            this.Controls.Add(this.txtDay);
+            this.Controls.Add(this.dtvList);
             this.Controls.Add(this.btnFind);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "View";
             this.Text = "View";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.View_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtvList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,11 +213,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Button btnFind;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtvList;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSuKien;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgaySuKien;
@@ -291,5 +222,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NamSuKien;
         private System.Windows.Forms.DataGridViewTextBoxColumn NoiDungSuKien;
         private System.Windows.Forms.DataGridViewTextBoxColumn HinhAnh;
+        private System.Windows.Forms.TextBox txtDay;
+        private System.Windows.Forms.TextBox txtMonth;
+        private System.Windows.Forms.TextBox txtYear;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

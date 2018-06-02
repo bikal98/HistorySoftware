@@ -24,7 +24,7 @@ namespace HistorySoftware.QuanLiSuKien
             this.Close();
             var form = new Form1();
             form.ShowDialog();
-            Application.Exit();
+            
            
 
 
@@ -75,7 +75,7 @@ namespace HistorySoftware.QuanLiSuKien
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Cannot deletclass: " + item.Id);
+                        MessageBox.Show("Cannot delete class: " + item.Id);
                     }
                     this.ShowList();
 

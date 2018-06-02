@@ -32,15 +32,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtInput = new System.Windows.Forms.TextBox();
             this.lstEvent = new System.Windows.Forms.DataGridView();
-            this.btnSearch_Click = new System.Windows.Forms.Button();
-            this.historySoftwareDataSet = new HistorySoftware.HistorySoftwareDataSet();
-            this.historySoftwareDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenSuKien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgaySuKien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ThangSuKien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NamSuKien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NoiDungSuKien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSearch_Click = new System.Windows.Forms.Button();
+            this.historySoftwareDataSet = new HistorySoftware.HistorySoftwareDataSet();
+            this.historySoftwareDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.lstEvent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.historySoftwareDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.historySoftwareDataSetBindingSource)).BeginInit();
@@ -81,26 +82,6 @@
             this.lstEvent.Size = new System.Drawing.Size(776, 304);
             this.lstEvent.TabIndex = 2;
             this.lstEvent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.lstEvent_CellContentClick);
-            // 
-            // btnSearch_Click
-            // 
-            this.btnSearch_Click.Location = new System.Drawing.Point(320, 105);
-            this.btnSearch_Click.Name = "btnSearch_Click";
-            this.btnSearch_Click.Size = new System.Drawing.Size(148, 23);
-            this.btnSearch_Click.TabIndex = 3;
-            this.btnSearch_Click.Text = "Tìm kiếm";
-            this.btnSearch_Click.UseVisualStyleBackColor = true;
-            this.btnSearch_Click.Click += new System.EventHandler(this.btnSearch_Click_Click_1);
-            // 
-            // historySoftwareDataSet
-            // 
-            this.historySoftwareDataSet.DataSetName = "HistorySoftwareDataSet";
-            this.historySoftwareDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // historySoftwareDataSetBindingSource
-            // 
-            this.historySoftwareDataSetBindingSource.DataSource = this.historySoftwareDataSet;
-            this.historySoftwareDataSetBindingSource.Position = 0;
             // 
             // Id
             // 
@@ -145,11 +126,42 @@
             this.NoiDungSuKien.Name = "NoiDungSuKien";
             this.NoiDungSuKien.ReadOnly = true;
             // 
+            // btnSearch_Click
+            // 
+            this.btnSearch_Click.Location = new System.Drawing.Point(166, 105);
+            this.btnSearch_Click.Name = "btnSearch_Click";
+            this.btnSearch_Click.Size = new System.Drawing.Size(84, 23);
+            this.btnSearch_Click.TabIndex = 3;
+            this.btnSearch_Click.Text = "Tìm kiếm";
+            this.btnSearch_Click.UseVisualStyleBackColor = true;
+            this.btnSearch_Click.Click += new System.EventHandler(this.btnSearch_Click_Click_1);
+            // 
+            // historySoftwareDataSet
+            // 
+            this.historySoftwareDataSet.DataSetName = "HistorySoftwareDataSet";
+            this.historySoftwareDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // historySoftwareDataSetBindingSource
+            // 
+            this.historySoftwareDataSetBindingSource.DataSource = this.historySoftwareDataSet;
+            this.historySoftwareDataSetBindingSource.Position = 0;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(437, 105);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefresh.TabIndex = 4;
+            this.btnRefresh.Text = "Làm Mới";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // Search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnSearch_Click);
             this.Controls.Add(this.lstEvent);
             this.Controls.Add(this.txtInput);
@@ -179,5 +191,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ThangSuKien;
         private System.Windows.Forms.DataGridViewTextBoxColumn NamSuKien;
         private System.Windows.Forms.DataGridViewTextBoxColumn NoiDungSuKien;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

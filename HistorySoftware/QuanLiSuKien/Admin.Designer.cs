@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.btnFix = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAdd = new System.Windows.Forms.ToolStripMenuItem();
             this.btnDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.btnRefresh = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,22 +49,14 @@
             // 
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnFix,
             this.btnAdd,
             this.btnDelete,
             this.btnRefresh});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(79, 450);
+            this.menuStrip1.Size = new System.Drawing.Size(126, 450);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // btnFix
-            // 
-            this.btnFix.Name = "btnFix";
-            this.btnFix.Size = new System.Drawing.Size(113, 19);
-            this.btnFix.Text = "Chỉnh Sửa";
-            this.btnFix.Click += new System.EventHandler(this.btnFix_Click);
             // 
             // btnAdd
             // 
@@ -102,10 +93,10 @@
             this.NoiDungSuKien,
             this.Image});
             this.dtlShow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtlShow.Location = new System.Drawing.Point(79, 0);
+            this.dtlShow.Location = new System.Drawing.Point(126, 0);
             this.dtlShow.Name = "dtlShow";
             this.dtlShow.ReadOnly = true;
-            this.dtlShow.Size = new System.Drawing.Size(721, 450);
+            this.dtlShow.Size = new System.Drawing.Size(674, 450);
             this.dtlShow.TabIndex = 1;
             this.dtlShow.DoubleClick += new System.EventHandler(this.dtlShow_doubleClick);
             // 
@@ -190,7 +181,6 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem btnFix;
         private System.Windows.Forms.ToolStripMenuItem btnAdd;
         private System.Windows.Forms.ToolStripMenuItem btnDelete;
         private System.Windows.Forms.DataGridView dtlShow;

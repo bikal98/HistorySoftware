@@ -75,5 +75,19 @@ namespace HistorySoftware.QuanLiSuKien
             dts.content = (lstEvent.CurrentRow.Cells["NoiDungSuKien"].Value.ToString());
             dts.Show();
         }
+
+        private void ShowList()
+        {
+            var db = new HistorySoftwareEntities2();
+            var list = db.SuKiens.ToList();
+            this.lstEvent.DataSource = list;
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            txtInput.Text = "";
+            
+            this.ShowList();
+        }
     }
 }
